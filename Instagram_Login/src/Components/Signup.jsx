@@ -20,7 +20,7 @@ const Signup = ({onClick}) => {
         <input className="border border-black m-6 w-10/12 p-2" type="password" placeholder="Enter password" /> <br /> 
         <button onClick={onClick} className="border border-blue text-black bg-blue-700 w-10/12 ml-6 pointer rounded-lg p-4 text-white font-mono font-bold " type="submit"> Signup</button>
       </form> <br />
-      <p className="ml-6 mb-4 font-bold "> Have an account? <button className=" text-blue-900 ">Login</button> </p>
+      <p className="ml-6 mb-4 font-bold "> Have an account? <button className=" text-blue-900 " onClick={onClick}>Login</button> </p>
       </div>
     </div>
   );
