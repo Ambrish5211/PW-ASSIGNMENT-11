@@ -1,16 +1,21 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import './App.css'
-import Login from './Components/Login'
+import './App.css';
+import Login from './Components/Login';
+import Signup from './Components/Signup';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [toggle, setToggle] = useState(false);
+
+  function handleClick() {
+    setToggle((prevToggle) => !prevToggle);
+  }
 
   return (
-    
-    <Login />
-    
-  )
+    <div>
+      {toggle === false ? <Login onClick={handleClick} /> : <Signup onClick={handleClick} />}
+    </div>
+  );
 }
 
-export default App
+export default App;
